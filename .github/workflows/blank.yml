@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     if: |
       github.event.pull_request.merged == true &&
-      contains(github.event.pull_request.labels.*.name, 'bounty') }}
+      contains(github.event.pull_request.labels.*.name, 'bounty')
     steps:
       - uses: web3actions/tx@593fa08f4aaf9a4b206d3d7876cd6f8746093a4b
         with:
