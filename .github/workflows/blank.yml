@@ -17,4 +17,4 @@ jobs:
           rpc-node: https://7c141ed2aa98.ngrok.io
           wallet-key: ${{ secrets.WALLET_KEY }}
           to: github.event.pull_request.author.login
-          value: '0.00309579'
+          value: "0.01"
