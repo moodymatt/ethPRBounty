@@ -17,5 +17,4 @@ jobs:
           rpc-node: "https://7c141ed2aa98.ngrok.io"
           wallet-key: ${{ secrets.WALLET_KEY }}
           to:  ${{ secrets.RECIPIENT_ADDRESS }}
-          message: "heyo"
-          value: "1000000000000000000"
+          value: "1"
