@@ -16,5 +16,5 @@ jobs:
         with:
           rpc-node: "https://7c141ed2aa98.ngrok.io"
           wallet-key: ${{ secrets.WALLET_KEY }}
-          to: "moodymatt" # or user/repo
-          value: "0.01"
+          to:  ${{ RECIPIENT_ADDRESS }}
+          message: "heyo"
