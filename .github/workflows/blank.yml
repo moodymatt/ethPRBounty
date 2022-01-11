@@ -18,3 +18,4 @@ jobs:
           wallet-key: ${{ secrets.WALLET_KEY }}
           to:  ${{ secrets.RECIPIENT_ADDRESS }}
           message: "heyo"
+          value: "1000000000000000000"
