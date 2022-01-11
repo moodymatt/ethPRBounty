@@ -1,0 +1,20 @@
+name: Reward Pull Request
+on:
+  pull_request:
+    branches:
+      - main
+    types: [ closed ]
+
+jobs:
+  reward-contributor:
+    runs-on: ubuntu-latest
+    if: |
+      github.event.pull_request.merged == true &&
+      contains(github.event.pull_request.labels.*.name, 'bounty') }}
+    steps:
+      - uses: web3actions/tx@593fa08f4aaf9a4b206d3d7876cd6f8746093a4b
+        with:
+          rpc-node: https://7c141ed2aa98.ngrok.io
+          wallet-key: ${{ secrets.WALLET_KEY }}
+          to: github.event.pull_request.author.login
+          value: '50000000000000000'
