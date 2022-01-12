@@ -17,4 +17,4 @@ jobs:
           rpc-node: "https://kovan.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"
           wallet-key: ${{ secrets.WALLET_KEY }}
           to:  ${{ secrets.RECIPIENT_ADDRESS }}
-          value: "1"
+          value: ".0002"
