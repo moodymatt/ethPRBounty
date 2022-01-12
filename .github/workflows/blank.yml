@@ -6,15 +6,24 @@ on:
     types: [ closed ]
 
 jobs:
+  ethusd:
+    runs-on: ubuntu-latest
+    outputs:
+      - price: ${{ steps.ethusd.outputs.price }}
+    steps:
+      - name: 
   reward-contributor:
     runs-on: ubuntu-latest
     if: |
       github.event.pull_request.merged == true &&
       contains(github.event.pull_request.labels.*.name, 'bounty')
     steps:
-      - uses: moodymatt/tx@marketplace-v1.0.2
+      - uses: moodymatt/tx@marketplace-v1.0.3
         with:
           rpc-node: "https://kovan.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"
           wallet-key: ${{ secrets.WALLET_KEY }}
           to:  "moodymatt/moodymatt"
-          value: ".0002"
+          value: "1"
+          contract-address: "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419"
+          contract-decimals: "8"
+          
