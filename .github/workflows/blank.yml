@@ -6,12 +6,6 @@ on:
     types: [ closed ]
 
 jobs:
-  ethusd:
-    runs-on: ubuntu-latest
-    outputs:
-      - price: ${{ steps.ethusd.outputs.price }}
-    steps:
-      - name: 
   reward-contributor:
     runs-on: ubuntu-latest
     if: |
