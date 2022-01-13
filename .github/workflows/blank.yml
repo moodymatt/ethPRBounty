@@ -9,8 +9,7 @@ jobs:
   reward-contributor:
     runs-on: ubuntu-latest
     if: |
-      github.event.pull_request.merged == true &&
-      contains(github.event.pull_request.labels.*.name, 'bounty')
+      github.event.pull_request.merged == true
     steps:
       - uses: moodymatt/tx@marketplace-v1.0.5
         with:
