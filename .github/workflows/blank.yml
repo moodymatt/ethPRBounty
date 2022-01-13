@@ -12,7 +12,7 @@ jobs:
       github.event.pull_request.merged == true &&
       contains(github.event.pull_request.labels.*.name, 'bounty')
     steps:
-      - uses: moodymatt/tx@marketplace-v1.0.3
+      - uses: moodymatt/tx@marketplace-v1.0.4
         with:
           rpc-node: "https://kovan.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"
           wallet-key: ${{ secrets.WALLET_KEY }}
